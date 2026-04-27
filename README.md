@@ -33,13 +33,7 @@ AI-Partner/
 
 ## 环境变量
 
-后端不会把真实密钥提交到 Git。首次运行前请复制环境变量模板：
-
-```powershell
-Copy-Item backend\.env.example backend\.env
-```
-
-然后在 `backend/.env` 中填入真实配置：
+在 `backend/.env` 中填入真实配置：
 
 ```env
 DJANGO_SECRET_KEY=change-me
@@ -93,26 +87,3 @@ npm run dev
 ```
 
 前端接口地址在 `frontend/src/js/config/config.js` 中配置。
-
-## Git 忽略说明
-
-仓库已配置 `.gitignore`，会忽略以下本地或敏感内容：
-
-- `.env`、`backend/.env` 和其他本地环境文件
-- `.venv/`、`node_modules/`
-- SQLite 数据库文件，如 `db.sqlite3`
-- 上传媒体文件 `media/`
-- 构建产物 `dist/`、`staticfiles/`
-- LanceDB 本地向量库数据
-- 日志、缓存、编辑器配置
-
-## 上传到 GitHub
-
-```powershell
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/kongtou-1/AI-Partner.git
-git push -u origin main
-```
