@@ -1,0 +1,27 @@
+[project]
+name = "aifriends-backend"
+version = "0.1.0"
+description = "Django backend for an AI companion application."
+readme = "README.md"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "django>=6.0,<6.1",
+    "djangorestframework",
+    "djangorestframework-simplejwt",
+    "django-cors-headers",
+    "python-dotenv",
+    "pillow",
+    "requests",
+    "websockets",
+    "openai",
+    "langchain-core",
+    "langchain-community",
+    "langchain-openai",
+    "langchain-text-splitters",
+    "langgraph",
+    "lancedb",
+    "djangorestframework-stubs>=3.16.9",
+]
+
+[tool.uv]
+package = false
